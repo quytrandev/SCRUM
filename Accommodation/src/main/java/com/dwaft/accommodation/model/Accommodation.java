@@ -8,47 +8,50 @@ public class Accommodation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "accommodationid")
-    int id;
+    private int id;
     @Column(name = "address")
-    String address;
+    private String address;
     @Column(name = "preferclient")
-    String preferClient;
+    private String preferClient;
     @Column(name = "size")
-    int size;
+    private int size;
     @Column(name = "price")
-    int price;
+    private int price;
     @Column(name = "description")
-    String decription;
-    @Column(name = "type")
-    String type;
+    private String description;
+    @ManyToOne
+    @JoinColumn(name = "typeid")
+    private AccommodationType accommodationType;
     @Column(name = "title")
-    String title;
-    @Column(name = "owner")
-    String owner;
+    private String title;
+    @ManyToOne
+    @JoinColumn(name = "userid")
+    private User user;
     @Column(name = "status")
-    String status;
+    private String status;
     @Column(name = "date")
-    String date;
-
-
+    private String date;
     @Column(name = "image")
     String image;
-    public Accommodation(int id, String address, String preferClient, int size, int price, String decription, String type, String title, String owner, String status, String date,String image) {
+
+
+    public  Accommodation(){}
+
+    public Accommodation(int id, String address, String preferClient, int size, int price, String description,
+                         AccommodationType accommodationType, String title,
+                         User user, String status, String date,String image) {
         this.id = id;
         this.address = address;
         this.preferClient = preferClient;
         this.size = size;
         this.price = price;
-        this.decription = decription;
-        this.type = type;
+        this.description = description;
+        this.accommodationType = accommodationType;
         this.title = title;
-        this.owner = owner;
+        this.user = user;
         this.status = status;
         this.date = date;
         this.image = image;
-    }
-
-    public Accommodation() {
     }
 
     public String getImage() {
@@ -99,20 +102,12 @@ public class Accommodation {
         this.price = price;
     }
 
-    public String getDecription() {
-        return decription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDecription(String decription) {
-        this.decription = decription;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getTitle() {
@@ -123,12 +118,13 @@ public class Accommodation {
         this.title = title;
     }
 
-    public String getOwner() {
-        return owner;
+
+    public User getuser() {
+        return user;
     }
 
-    public void setOwner(String owner) {
-        this.owner = owner;
+    public void setuser(User user) {
+        this.user = user;
     }
 
     public String getStatus() {
@@ -145,5 +141,13 @@ public class Accommodation {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public AccommodationType getAccommodationType() {
+        return accommodationType;
+    }
+
+    public void setAccommodationType(AccommodationType accommodationType) {
+        this.accommodationType = accommodationType;
     }
 }

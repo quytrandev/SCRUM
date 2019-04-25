@@ -134,9 +134,9 @@
                 <h4 class="post-modern-title"><a class="post-modern-title" href="#">${room.address}</a></h4>
                 <ul class="post-modern-meta">
                   <li><a class="button-winona" href="#">${room.price} VNĐ</a></li>
-                  <li>Nguyễn Văn A</li>
+                  <li>${room.user.userName}</li>
                   <li>200m vuông</li>
-                  <li>Số Điện Thoại: 0938123456</li>
+                  <li>Số Điện Thoại: ${room.user.contact}</li>
                 </ul>
                 <p>${room.title}</p>
 

@@ -1,10 +1,21 @@
 package com.dwaft.accommodation.model;
 
+import javax.persistence.*;
+
+@Table(name = "user")
+@Entity
 public class User {
-    int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "userid")
+    private int id;
+    @Column(name = "email")
     String email;
+    @Column(name = "username")
     String userName;
+    @Column(name = "password")
     String password;
+    @Column(name = "contact")
     String contact;
 
     public User(int id, String email, String userName, String password, String contact) {
