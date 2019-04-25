@@ -11,17 +11,17 @@
     <meta name="viewport" content="width=device-width height=device-height initial-scale=1.0 maximum-scale=1.0 user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../public/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800%7CPoppins:300,400,700">
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css" id="main-styles-link">
+    <link rel="stylesheet" href="../../public/css/bootstrap.css">
+    <link rel="stylesheet" href="../../public/css/fonts.css">
+    <link rel="stylesheet" href="../../public/css/style.css" id="main-styles-link">
     <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
   </head>
   <body>
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="../../public/images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <div class="preloader">
-      <div class="preloader-logo"><img src="images/logo-default-151x44.png" alt="" width="151" height="44" srcset="images/logo-default-151x44.png 2x"/>
+      <div class="preloader-logo"><img src="../../public/images/logo-default-151x44.png" alt="" width="151" height="44" srcset="../../public/images/logo-default-151x44.png 2x"/>
       </div>
       <div class="preloader-body">
         <div id="loadingProgressG">
@@ -41,7 +41,7 @@
                 <div class="rd-navbar-panel">
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle="#rd-navbar-nav-wrap-1"><span></span></button>
-                  <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.html"><img src="images/logo-default-151x44.png" alt="" width="151" height="44" srcset="images/logo-default-151x44.png 2x"/></a>
+                  <!-- RD Navbar Brand--><a class="rd-navbar-brand" href="index.html"><img src="../../public/images/logo-default-151x44.png" alt="" width="151" height="44" srcset="../../public/images/logo-default-151x44.png 2x"/></a>
                 </div>
                 <div class="rd-navbar-collapse">
                   <button class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle="#rd-navbar-collapse-content-1"><span></span></button>
@@ -56,7 +56,7 @@
                     </article>
                     <article class="unit align-items-center">
                       <input type="text"/>
-                      <img src="images/find.png">
+                      <img src="../../public/images/find.png">
                     </article>
 
                   </div>
@@ -124,61 +124,25 @@
         <div class="container">
           <h3 class="text-uppercase font-weight-bold wow-outer"><span class="wow slideInDown">Thông Tin Phòng</span></h3>
           <div class="row row-lg-50 row-35 offset-top-2">
+            <c:forEach items="${listRoom}" var="room">
             <div class="col-md-6 wow-outer">
               <!-- Post Modern-->
-            <c:forEach items="${listRoom}" var="room">
-              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#"><img src="images/room1.jpg" alt="" width="571" height="353"/></a>
+
+              <article class="post-modern wow slideInLeft">
+                <a class="post-modern-media" href="#">
+                  <img src="../../public/images/${room.image}" alt="" width="571" height="353"/></a>
                 <h4 class="post-modern-title"><a class="post-modern-title" href="#">${room.address}</a></h4>
                 <ul class="post-modern-meta">
-                  <li><a class="button-winona" href="#">${room.price}</a></li>
+                  <li><a class="button-winona" href="#">${room.price} VNĐ</a></li>
                   <li>Nguyễn Văn A</li>
                   <li>200m vuông</li>
                   <li>Số Điện Thoại: 0938123456</li>
                 </ul>
-                <p>Gần trường Đại Học Sư Phạm Kỹ Thuật</p>
-              </article>
-            </div>
-            <div class="col-md-6 wow-outer">
-              <!-- Post Modern-->
-              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#"><img src="images/room1.jpg" alt="" width="571" height="353"/></a>
-                <h4 class="post-modern-title"><a class="post-modern-title" href="#">01 Võ Văn Ngân,Phường Linh Chiểu,Thủ Đức, TP.HCM</a></h4>
-                <ul class="post-modern-meta">
-                  <li><a class="button-winona" href="#">2.000.000 VNĐ/tháng</a></li>
-                  <li>Nguyễn Văn A</li>
-                  <li>200m vuông</li>
-                  <li>Số Điện Thoại: 0938123456</li>
-                </ul>
-                <p>Gần trường Đại Học Sư Phạm Kỹ Thuật</p>
-              </article>
-            </div>
-            <div class="col-md-6 wow-outer">
-              <!-- Post Modern-->
-              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#"><img src="images/room1.jpg" alt="" width="571" height="353"/></a>
-                <h4 class="post-modern-title"><a class="post-modern-title" href="#">01 Võ Văn Ngân,Phường Linh Chiểu,Thủ Đức, TP.HCM</a></h4>
-                <ul class="post-modern-meta">
-                  <li><a class="button-winona" href="#">2.000.000 VNĐ/tháng</a></li>
-                  <li>Nguyễn Văn A</li>
-                  <li>200m vuông</li>
-                  <li>Số Điện Thoại: 0938123456</li>
-                </ul>
-                <p>Gần trường Đại Học Sư Phạm Kỹ Thuật</p>
-              </article>
-            </div>
-            <div class="col-md-6 wow-outer">
-              <!-- Post Modern-->
-              <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#"><img src="images/room1.jpg" alt="" width="571" height="353"/></a>
-                <h4 class="post-modern-title"><a class="post-modern-title" href="#">01 Võ Văn Ngân,Phường Linh Chiểu,Thủ Đức, TP.HCM</a></h4>
-                <ul class="post-modern-meta">
-                  <li><a class="button-winona" href="#">2.000.000 VNĐ/tháng</a></li>
-                  <li>Nguyễn Văn A</li>
-                  <li>200m vuông</li>
-                  <li>Số Điện Thoại: 0938123456</li>
-                </ul>
-                <p>Gần trường Đại Học Sư Phạm Kỹ Thuật</p>
-              </article>
-            </c:forEach>
+                <p>${room.title}</p>
 
+              </article>
             </div>
+            </c:forEach>
             <div class="col-md-12 wow-outer"><a class="button button-primary button-winona button-md" href="#">Xem Thêm</a></div>
           </div>
         </div>
@@ -226,7 +190,7 @@
         </div>
         <div class="footer-advanced-aside">
           <div class="container">
-            <div class="footer-advanced-layout"><a class="brand" href="index.html"><img src="images/logo-light-115x34.png" alt="" width="115" height="34" srcset="images/logo-light-115x34.png 2x"/></a>
+            <div class="footer-advanced-layout"><a class="brand" href="index.html"><img src="../../public/images/logo-light-115x34.png" alt="" width="115" height="34" srcset="images/logo-light-115x34.png 2x"/></a>
               <!-- Rights-->
               <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span>. All Rights Reserved. Design by Snow White And 7 Dwarfs</p>
             </div>
@@ -237,7 +201,7 @@
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
-    <script src="js/core.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="../../public/js/core.min.js"></script>
+    <script src="../../public/js/script.js"></script>
   </body>
 </html>

@@ -30,7 +30,10 @@ public class Accommodation {
     @Column(name = "date")
     String date;
 
-    public Accommodation(int id, String address, String preferClient, int size, int price, String decription, String type, String title, String owner, String status, String date) {
+
+    @Column(name = "image")
+    String image;
+    public Accommodation(int id, String address, String preferClient, int size, int price, String decription, String type, String title, String owner, String status, String date,String image) {
         this.id = id;
         this.address = address;
         this.preferClient = preferClient;
@@ -42,9 +45,18 @@ public class Accommodation {
         this.owner = owner;
         this.status = status;
         this.date = date;
+        this.image = image;
     }
 
     public Accommodation() {
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 
     public int getId() {
