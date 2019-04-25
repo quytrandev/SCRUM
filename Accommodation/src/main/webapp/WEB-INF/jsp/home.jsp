@@ -15,10 +15,10 @@
 </head>
 <body>
 <h2 style="font-family: Cambria;color: Navy;font-size:60px;text-align: center;font-style: inherit">Danh Sách Phòng</h2>
-<c:forEach items="${listRoom}" var="room">
-    Mã Phòng: ${room.id}
+<c:forEach items="${listUser}" var="user">
+    User id: ${user.id}
     <br/>
-    Tiêu đề : ${room.title}
+    UserName : ${user.userName}
 </c:forEach>
 </body>
 <br>
