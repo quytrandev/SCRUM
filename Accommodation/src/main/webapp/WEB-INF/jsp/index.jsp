@@ -1,3 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+         pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
@@ -42,18 +47,18 @@
                   <button class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle="#rd-navbar-collapse-content-1"><span></span></button>
                   <div class="rd-navbar-collapse-content" id="rd-navbar-collapse-content-1">
                     <article class="unit align-items-center">
-                
+
                       <div class="unit-body">
                         <ul class="list-0">
-                          
+
                         </ul>
                       </div>
                     </article>
                     <article class="unit align-items-center">
                       <input type="text"/>
-                      <img src="images/find.png"> 
+                      <img src="images/find.png">
                     </article>
-                   
+
                   </div>
                 </div>
               </div>
@@ -84,9 +89,9 @@
             <div class="container">
               <div class="jumbotron-classic-content">
                 <div class="wow-outer">
-                  
+
                 </div>
-                
+
               </div>
             </div>
           </div>
@@ -94,9 +99,9 @@
             <div class="container">
               <div class="jumbotron-classic-content">
                 <div class="wow-outer">
-                  
+
                 </div>
-                
+
               </div>
             </div>
           </div>
@@ -104,9 +109,9 @@
             <div class="container">
               <div class="jumbotron-classic-content">
                 <div class="wow-outer">
-                  
+
                 </div>
-                
+
               </div>
             </div>
           </div>
@@ -117,14 +122,15 @@
       </section>
       <section class="section novi-background section-md text-center">
         <div class="container">
-          <h3 class="text-uppercase font-weight-bold wow-outer"><span class="wow slideInDown">Thông Tin Phòng Còn </span></h3>
+          <h3 class="text-uppercase font-weight-bold wow-outer"><span class="wow slideInDown">Thông Tin Phòng</span></h3>
           <div class="row row-lg-50 row-35 offset-top-2">
             <div class="col-md-6 wow-outer">
               <!-- Post Modern-->
+            <c:forEach items="${listRoom}" var="room">
               <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#"><img src="images/room1.jpg" alt="" width="571" height="353"/></a>
-                <h4 class="post-modern-title"><a class="post-modern-title" href="#">01 Võ Văn Ngân,Phường Linh Chiểu,Thủ Đức, TP.HCM</a></h4>
+                <h4 class="post-modern-title"><a class="post-modern-title" href="#">${room.address}</a></h4>
                 <ul class="post-modern-meta">
-                  <li><a class="button-winona" href="#">2.000.000 VNĐ/tháng</a></li>
+                  <li><a class="button-winona" href="#">${room.price}</a></li>
                   <li>Nguyễn Văn A</li>
                   <li>200m vuông</li>
                   <li>Số Điện Thoại: 0938123456</li>
@@ -163,20 +169,22 @@
               <article class="post-modern wow slideInLeft"><a class="post-modern-media" href="#"><img src="images/room1.jpg" alt="" width="571" height="353"/></a>
                 <h4 class="post-modern-title"><a class="post-modern-title" href="#">01 Võ Văn Ngân,Phường Linh Chiểu,Thủ Đức, TP.HCM</a></h4>
                 <ul class="post-modern-meta">
-                    <li><a class="button-winona" href="#">2.000.000 VNĐ/tháng</a></li>
-                    <li>Nguyễn Văn A</li>
-                    <li>200m vuông</li>
-                    <li>Số Điện Thoại: 0938123456</li>
+                  <li><a class="button-winona" href="#">2.000.000 VNĐ/tháng</a></li>
+                  <li>Nguyễn Văn A</li>
+                  <li>200m vuông</li>
+                  <li>Số Điện Thoại: 0938123456</li>
                 </ul>
                 <p>Gần trường Đại Học Sư Phạm Kỹ Thuật</p>
               </article>
+            </c:forEach>
+
             </div>
             <div class="col-md-12 wow-outer"><a class="button button-primary button-winona button-md" href="#">Xem Thêm</a></div>
           </div>
         </div>
       </section>
-      
-     
+
+
       <a class="banner" href="https://www.templatemonster.com/intense-multipurpose-html-template.html" target="_blank">
         <img src="" alt=""/></a>
       <footer class="section novi-background footer-advanced bg-gray-700">
@@ -186,11 +194,11 @@
               <div class="col-lg-4">
                 <h5 class="font-weight-bold text-uppercase text-white">Về chúng tôi</h5>
                 <p class="footer-advanced-text">Ghi thông tin đơn vị sở hữu website ở đây</p>
-              
+
               </div>
-              
+
               <div class="col-sm-5 col-md-7 col-lg-4">
-                
+
               </div>
             </div>
           </div>
@@ -199,7 +207,7 @@
           <div class="container">
             <div class="footer-advanced-layout">
               <div>
-               
+
               </div>
               <div>
                 <ul class="foter-social-links list-inline list-inline-md">

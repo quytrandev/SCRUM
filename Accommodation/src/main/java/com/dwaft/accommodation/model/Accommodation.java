@@ -1,16 +1,33 @@
 package com.dwaft.accommodation.model;
 
+import javax.persistence.*;
+
+@Table(name = "accommodation")
+@Entity
 public class Accommodation {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "accommodationid")
     int id;
+    @Column(name = "address")
     String address;
+    @Column(name = "preferclient")
     String preferClient;
+    @Column(name = "size")
     int size;
+    @Column(name = "price")
     int price;
+    @Column(name = "description")
     String decription;
+    @Column(name = "type")
     String type;
+    @Column(name = "title")
     String title;
+    @Column(name = "owner")
     String owner;
+    @Column(name = "status")
     String status;
+    @Column(name = "date")
     String date;
 
     public Accommodation(int id, String address, String preferClient, int size, int price, String decription, String type, String title, String owner, String status, String date) {
