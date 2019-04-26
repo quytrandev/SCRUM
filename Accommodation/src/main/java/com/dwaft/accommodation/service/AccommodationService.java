@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface AccommodationService {
     List<Accommodation> findAllAccommodation();
+    List<Accommodation> getAccommodationById(int id);
 }
