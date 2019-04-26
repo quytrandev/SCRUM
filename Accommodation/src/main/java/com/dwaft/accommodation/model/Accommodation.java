@@ -11,6 +11,15 @@ public class Accommodation {
     private int id;
     @Column(name = "address")
     private String address;
+
+    public String getPreferClient() {
+        return preferClient;
+    }
+
+    public void setPreferClient(String preferClient) {
+        this.preferClient = preferClient;
+    }
+
     @Column(name = "preferclient")
     private String preferClient;
     @Column(name = "size")
@@ -19,9 +28,6 @@ public class Accommodation {
     private int price;
     @Column(name = "description")
     private String description;
-    @ManyToOne
-    @JoinColumn(name = "typeid")
-    private AccommodationType accommodationType;
     @Column(name = "title")
     private String title;
     @ManyToOne
@@ -37,8 +43,8 @@ public class Accommodation {
 
     public  Accommodation(){}
 
-    public Accommodation(int id, String address, String preferClient, int size, int price, String description,
-                         AccommodationType accommodationType, String title,
+    public Accommodation(int id, String address, String preferClient, int size, int price, String description
+                         , String title,
                          User user, String status, String date,String image) {
         this.id = id;
         this.address = address;
@@ -46,7 +52,6 @@ public class Accommodation {
         this.size = size;
         this.price = price;
         this.description = description;
-        this.accommodationType = accommodationType;
         this.title = title;
         this.user = user;
         this.status = status;
@@ -76,14 +81,6 @@ public class Accommodation {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public String getPreferClient() {
-        return preferClient;
-    }
-
-    public void setPreferClient(String preferClient) {
-        this.preferClient = preferClient;
     }
 
     public int getSize() {
@@ -143,11 +140,4 @@ public class Accommodation {
         this.date = date;
     }
 
-    public AccommodationType getAccommodationType() {
-        return accommodationType;
-    }
-
-    public void setAccommodationType(AccommodationType accommodationType) {
-        this.accommodationType = accommodationType;
-    }
 }

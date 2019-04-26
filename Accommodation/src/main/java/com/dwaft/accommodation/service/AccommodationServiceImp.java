@@ -22,6 +22,7 @@ public class AccommodationServiceImp implements AccommodationService {
     }
 
     @Override
+<<<<<<< HEAD
     public List<Accommodation> getAccommodationById(int id) {
         List<Accommodation> accommodations = new ArrayList<>();
         for(Accommodation accommodation: accommodationRepository.findAll()) {
@@ -29,5 +30,19 @@ public class AccommodationServiceImp implements AccommodationService {
                 accommodations.add(accommodation);
         }
         return accommodations;
+=======
+    public Accommodation getAccommodationById(int id) {
+        return accommodationRepository.findById(id).get();
+    }
+
+    @Override
+    public void saveOrUpdateAccommodation(Accommodation accommodation) {
+        accommodationRepository.save(accommodation);
+    }
+
+    @Override
+    public void deleteAccommodation(int id) {
+        accommodationRepository.deleteById(id);
+>>>>>>> 27d73fdd59d7f6197d8e2588f684a81b54b89fa2
     }
 }
