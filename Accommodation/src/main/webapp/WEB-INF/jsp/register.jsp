@@ -55,6 +55,13 @@
             content: "✖";
         }
     </style>
+    <script>
+        function check_pass() {
+            if (document.getElementById('password').value !== document.getElementById('confirmpass').value) {
+                alert("Nhap lai mat khau khong trung khop")
+            }
+        }
+    </script>
 </head>
 <body>
 <spring:url value="/user/saveUser" var="saveURL" />
@@ -78,12 +85,12 @@
                 </div>
 
                 <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                    <input class="input100" type="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                    <input class="input100" type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
                     <span class="focus-input100" data-placeholder="Mật khẩu"></span>
 
                 </div>
                 <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-                    <input class="input100" type="password" name="confirmpass" id="confirmpass" >
+                    <input class="input100" type="password" name="confirmpass" id="confirmpass" onchange="check_pass()" >
                     <span class="focus-input100" data-placeholder="Nhập lại mật khẩu"></span>
                 </div>
 
