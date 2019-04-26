@@ -83,8 +83,8 @@
             </nav>
         </div>
     </header>
-    <spring:url value="/user/saveUser" var="saveURL" />
-    <form:form modelAttribute="user_add" method="post"
+    <spring:url value="/accommodation/saveAccommodation" var="saveURL" />
+    <form:form modelAttribute="accommodation_add" method="post"
                action="${saveURL }" cssClass="form">
         <form:hidden path="id" />
         <div class="form-group">
@@ -93,7 +93,7 @@
         </div>
         <div class="form-group">
             <label>Prefer Client</label>
-            <form:input path="preferclient" cssClass="form-control" id="preferclient" />
+            <form:input path="preferClient" cssClass="form-control" id="preferClient" />
         </div>
         <div class="form-group">
             <label>Size</label>
@@ -113,11 +113,11 @@
         </div>
         <div class="form-group">
             <label>Type</label>
-            <form:input path="type" cssClass="form-control" id="type"  />
+            <form:input path="accommodationType" cssClass="form-control" id="accommodationType"  />
         </div>
         <div class="form-group">
             <label>Owner</label>
-            <form:input path="user" cssClass="form-control" id="user"  />
+            <form:input path="user" cssClass="form-control" id="userid"  />
         </div>
         <div class="form-group">
             <label>Status</label>
@@ -127,7 +127,7 @@
             <label>Image</label>
             <form:input path="image" cssClass="form-control" id="image"  />
         </div>
-        <button type="submit" class="btn btn-primary">Sign up</button>
+        <button type="submit" class="btn btn-primary">Them</button>
     </form:form>
     <section class="section novi-background section-md text-center">
 

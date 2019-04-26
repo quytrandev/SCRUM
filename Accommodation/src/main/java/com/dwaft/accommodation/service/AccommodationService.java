@@ -6,4 +6,9 @@ import java.util.List;
 
 public interface AccommodationService {
     List<Accommodation> findAllAccommodation();
+    public Accommodation getAccommodationById(int id);
+
+    public void saveOrUpdateAccommodation(Accommodation accommodation);
+
+    public void deleteAccommodation(int id);
 }

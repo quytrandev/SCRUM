@@ -19,4 +19,19 @@ public class AccommodationServiceImp implements AccommodationService {
     public List<Accommodation> findAllAccommodation() {
         return accommodationRepository.findAll();
     }
+
+    @Override
+    public Accommodation getAccommodationById(int id) {
+        return accommodationRepository.findById(id).get();
+    }
+
+    @Override
+    public void saveOrUpdateAccommodation(Accommodation accommodation) {
+        accommodationRepository.save(accommodation);
+    }
+
+    @Override
+    public void deleteAccommodation(int id) {
+        accommodationRepository.deleteById(id);
+    }
 }
