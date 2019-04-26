@@ -87,6 +87,16 @@
                     <span class="focus-input100" data-placeholder="Nhập lại mật khẩu"></span>
                 </div>
 
+                <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                    <input class="input100" type="text" name="email" id="email" >
+                    <span class="focus-input100" data-placeholder="Nhập email"></span>
+                </div>
+
+                <div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+                    <input class="input100" type="text" name="contact" id="contact" >
+                    <span class="focus-input100" data-placeholder="Nhập số điện thoại"></span>
+                </div>
+
                 <div class="container-login100-form-btn">
                     <button class="login100-form-btn">
                         ĐĂNG KÍ
@@ -164,7 +174,7 @@
 								Quay lại
 							</span>
 
-                        <a href="index.jsp" class="txt2">
+                        <a href="login.jsp" class="txt2">
                             trang đăng nhập
                         </a>
                     </li>
