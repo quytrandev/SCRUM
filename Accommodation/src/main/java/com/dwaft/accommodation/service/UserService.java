@@ -13,4 +13,6 @@ public interface UserService {
 
     public void deleteUser(int id);
 
+    public List<User> findAllByUserNameAndPassword(String userName, String password);
+
 }

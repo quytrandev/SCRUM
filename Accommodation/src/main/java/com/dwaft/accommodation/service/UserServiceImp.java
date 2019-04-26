@@ -35,4 +35,10 @@ public class UserServiceImp implements UserService{
     public void deleteUser(int id) {
         userRepository.deleteById(id);
     }
+
+    @Override
+    public List<User> findAllByUserNameAndPassword(String userName, String password)
+    {
+        return userRepository.findAllByUserNameAndPassword(userName,password);
+    }
 }
